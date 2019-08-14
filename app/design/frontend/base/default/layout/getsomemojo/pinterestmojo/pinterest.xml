@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+ <!--
+/**
+ * Mojo Creative & Technical Solutions LLC
+ *
+ * @category   GetSomeMojo
+ * @package    GetSomeMojo_Pinterestmojo
+ * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @license    http://getsome.mojomage.com/license/
+ * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
+ */
+-->
+<layout version="1.0.0">
+    <catalog_product_view>
+        <reference name="product.info">
+            <reference name="alert.urls" before="-">
+                <block type="getsomemojo_pinterestmojo/PinterestButton" name="getsomemojo_pinterestmojo" />
+            </reference>
+        </reference>
+    </catalog_product_view>
+</layout>

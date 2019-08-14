@@ -1,0 +1,45 @@
+<?php
+/**
+ * Mojo Creative & Technical Solutions LLC
+ *
+ * @category   GetSomeMojo
+ * @package    GetSomeMojo_Pinterestmojo
+ * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @license    http://getsome.mojomage.com/license/
+ * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
+ */
+ ?>   
+<?php if ($this->getYeaH4yeaH()): ?>
+
+    <script type="text/javascript">
+    <!--
+    (function(d){
+      var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+      p.type = 'text/javascript';
+      <?php if ($this->getButtonType() == GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION3_VALUE): ?>
+      p.setAttribute('data-pin-hover', true);
+      <?php endif ?>
+      p.async = true;
+      p.src = '//assets.pinterest.com/js/pinit.js';
+      f.parentNode.insertBefore(p, f);
+    }(document));
+    -->
+    </script>
+
+    <?php if ($this->getButtonType() != GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION3_VALUE): ?>
+
+    <div id="mojoPinterest" align="<?php echo $this->getButtonAlign() ?>" style="<?php echo $this->getPinStyle() ?>">
+        <?php if ($this->getButtonType() == GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION1_VALUE): ?>
+        <a href="<?php echo $this->getPinUrl();?>" class="pin-it-button" data-pin-do="buttonPin" data-pin-config="<?php echo $this->getPinCount();?>">
+            <img src="<?php echo $this->_getPinButtonImageUrl() ?>" alt="Pin It" />
+        </a>
+        <?php elseif ($this->getButtonType() == GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION2_VALUE): ?>
+        <a href="<?php echo $this->_getPinButtonAnchorUrl() ?>" data-pin-do="buttonBookmark">
+            <img src="<?php echo $this->_getPinButtonImageUrl() ?>" alt="Pin It" />
+        </a>
+        <?php endif ?>
+    </div> 
+
+    <?php endif ?>
+
+<?php endif ?>

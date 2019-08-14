@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mojo Creative & Technical Solutions LLC
+ *
+ * @category   GetSomeMojo
+ * @package    GetSomeMojo_Pinterestmojo
+ * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @license    http://getsome.mojomage.com/license/
+ * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
+ */
+-->
+<config>
+    <tabs>
+        <getsomemojo translate="label" module="pinterestmojo">
+            <label>Get Some Mojo Extensions</label>
+            <sort_order>210</sort_order>
+        </getsomemojo>
+    </tabs>
+    <sections>
+        <pinterestmojo translate="label" module="pinterestmojo">
+            <class>separator-top</class>
+            <label>Pinterest Mojo</label>
+            <tab>getsomemojo</tab>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                        <![CDATA[
+                            <p><b>The Pinterest Mojo Extension was Developed by <a href="http://getsome.mojomage.com" target="_blank" title="Get Some Mojo!">Mojo Creative & Technical Solutions LLC</a>.<br /><br />LICENSE: <a href="//getsome.mojomage.com/license" target="_blank" title="Mojo Creative & Technical Solutions License">Click to Read</a><br /><br />HELP: <a href="mailto:support@mojomage.com" title="Mojo Creative & Technical Solutions LLC">support@MojoMage.com</a></b><br /><br/></p>
+                        ]]>
+                    </comment>
+                    <fields>
+                        <activate translate="label">
+                            <label>Enable Extension</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </activate>
+                        <type translate="label">
+                            <label>Button Type</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/ButtonType</backend_model>
+                            <source_model>pinterestmojo/ButtonType</source_model>
+                        </type>
+                        <count translate="label">
+                            <label>Pin Count</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/PinCount</backend_model>
+                            <source_model>pinterestmojo/PinCount</source_model>
+                        </count>
+                        <align translate="label">
+                            <label>Button Alignment (float)</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/ButtonAlign</backend_model>
+                            <source_model>pinterestmojo/ButtonAlign</source_model>
+                        </align>
+                        <style translate="label">
+                            <label>Custom CSS Styles</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Default: margin: 10px 0 10px;</comment>
+                            <tooltip>
+                                <![CDATA[
+                                <div style="ertical-align: middle; padding: 20px;">
+                                    <p>Add custom inline css to the DIV layer wrapped around the Pin It button.</p>
+                                </div>
+                                ]]>
+                            </tooltip>
+                        </style>
+                        <width translate="label">
+                            <label>Pin It Image Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Default: 800px</comment>
+                            <tooltip>
+                                <![CDATA[
+                                <div style="vertical-align: middle; padding: 20px;">
+                                    <p>The original base image width will override this setting if your base image dimensions are smaller than the default size (800px) or your custom size.</p>
+                                </div>
+                                ]]>
+                            </tooltip>
+                        </width>
+                        <price translate="label">
+                            <label>Show Product Price in Description</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Default: Yes</comment>
+                        </price>
+                    </fields>
+                </general>
+            </groups>
+        </pinterestmojo>
+    </sections>
+</config>

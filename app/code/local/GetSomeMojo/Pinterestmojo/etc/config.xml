@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Mojo Creative & Technical Solutions LLC
+ *
+ * @category   GetSomeMojo
+ * @package    GetSomeMojo_Pinterestmojo
+ * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @license    http://getsome.mojomage.com/license/
+ * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
+ */
+-->
+<config>
+    <modules>
+        <GetSomeMojo_Pinterestmojo>
+            <version>2.0.0</version>
+        </GetSomeMojo_Pinterestmojo>
+    </modules>
+    <admin>
+      <routers>
+          <getsomemojo_pinterestmojo>
+              <use>admin</use>
+              <args>
+                  <module>GetSomeMojo_Pinterestmojo</module>
+                  <frontName>pinterestmojo</frontName>
+              </args>
+          </getsomemojo_pinterestmojo>
+      </routers>
+    </admin>
+    <global>
+        <blocks>
+            <getsomemojo_pinterestmojo>
+                <class>GetSomeMojo_Pinterestmojo_Block</class>
+            </getsomemojo_pinterestmojo>
+        </blocks>
+        <helpers>
+            <pinterestmojo>
+                <class>GetSomeMojo_Pinterestmojo_Helper</class>
+            </pinterestmojo>
+        </helpers>        
+        <models>
+            <pinterestmojo>
+                <class>GetSomeMojo_Pinterestmojo_Model_Config</class>
+            </pinterestmojo>
+            <paypal>
+                <rewrite>
+                    <config>GetSomeMojo_Pinterestmojo_Model_Config_Bn</config>
+                </rewrite>
+            </paypal>
+        </models>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <getsomemojo_pinterestmojo>
+                    <file>getsomemojo/pinterestmojo/pinterest.xml</file>
+                </getsomemojo_pinterestmojo>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <pinterestmojo translate="title" module="pinterestmojo">
+                                            <title>Pinterest Mojo Developed By Mojo Creative and Technical Solutions LLC</title>
+                                            <sort_order>13</sort_order>
+                                        </pinterestmojo>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <default>
+        <pinterestmojo>
+            <general>
+                <activate>1</activate>
+                <type>one</type>
+                <count>none</count>
+                <align>left</align>
+                <style>margin: 10px 0 10px;</style>
+                <width>800</width>
+                <price>1</price>
+            </general>
+        </pinterestmojo>
+    </default>
+
+</config>
