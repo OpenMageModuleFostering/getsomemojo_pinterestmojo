@@ -5,7 +5,7 @@
  *
  * @category   GetSomeMojo
  * @package    GetSomeMojo_Pinterestmojo
- * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @copyright  Copyright (c) 2011-2015 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
  * @license    http://getsome.mojomage.com/license/
  * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
  */
@@ -59,10 +59,40 @@
                             <backend_model>pinterestmojo/ButtonType</backend_model>
                             <source_model>pinterestmojo/ButtonType</source_model>
                         </type>
+                        <size translate="label">
+                            <label>Button Size</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/ButtonSize</backend_model>
+                            <source_model>pinterestmojo/ButtonSize</source_model>
+                        </size>
+                        <shape translate="label">
+                            <label>Button Shape</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/ButtonShape</backend_model>
+                            <source_model>pinterestmojo/ButtonShape</source_model>
+                        </shape>
+                        <color translate="label">
+                            <label>Button Color</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <backend_model>pinterestmojo/ButtonColor</backend_model>
+                            <source_model>pinterestmojo/ButtonColor</source_model>
+                        </color>
                         <count translate="label">
                             <label>Pin Count</label>
                             <frontend_type>select</frontend_type>
-                            <sort_order>10</sort_order>
+                            <sort_order>17</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -119,7 +149,45 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>Default: Yes</comment>
+                            <comment>
+                                Default: Yes
+                                <![CDATA[
+                                <script type="text/javascript">
+
+                                    if ($('pinterestmojo_general_shape').value == 'round') {
+                                        $('pinterestmojo_general_count').disabled = true;
+                                        $('pinterestmojo_general_color').disabled = true;
+                                    } else {
+                                        $('pinterestmojo_general_count').disabled = false;
+                                        $('pinterestmojo_general_color').disabled = false;
+                                    }
+
+                                    $('pinterestmojo_general_shape').on('change', function() {
+                                        if (this.value == 'rectangular') {
+                                            $('pinterestmojo_general_count').disabled = false;
+                                            $('pinterestmojo_general_color').disabled = false;
+                                        } else {
+                                            $('pinterestmojo_general_count').disabled = true;
+                                            $('pinterestmojo_general_color').disabled = true;
+                                        }
+                                    });
+
+                                    if ($('pinterestmojo_general_type').value == 'any' || $('pinterestmojo_general_type').value == 'hover') {
+                                        $('pinterestmojo_general_count').disabled = true;
+                                    } else {
+                                        $('pinterestmojo_general_count').disabled = false;
+                                    }
+
+                                    $('pinterestmojo_general_type').on('change', function() {
+                                        if (this.value == 'any' || this.value == 'hover') {
+                                            $('pinterestmojo_general_count').disabled = true;
+                                        } else {
+                                            $('pinterestmojo_general_count').disabled = false;
+                                        }
+                                    });
+                                </script>
+                                ]]>
+                            </comment>
                         </price>
                     </fields>
                 </general>

@@ -9,12 +9,11 @@
  * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
  */
 
-class GetSomeMojo_Pinterestmojo_Model_Config_PinCount extends Mage_Core_Model_Config_Data
+class GetSomeMojo_Pinterestmojo_Model_Config_ButtonShape extends Mage_Core_Model_Config_Data
 {
 
-    const OPTION1_VALUE = 'above';
-    const OPTION2_VALUE = 'beside';
-    const OPTION3_VALUE = 'none';
+    const OPTION1_VALUE = 'rectangular';
+    const OPTION2_VALUE = 'round';
 
     /**
      * Fills the select field with values
@@ -25,9 +24,8 @@ class GetSomeMojo_Pinterestmojo_Model_Config_PinCount extends Mage_Core_Model_Co
     {
 
         return array(
-            self::OPTION1_VALUE => Mage::helper('pinterestmojo')->__('Above the Button'),
-            self::OPTION2_VALUE => Mage::helper('pinterestmojo')->__('Beside the Button'),
-            self::OPTION3_VALUE => Mage::helper('pinterestmojo')->__('Not Shown'),
+            self::OPTION1_VALUE => Mage::helper('pinterestmojo')->__('Rectangular'),
+            self::OPTION2_VALUE => Mage::helper('pinterestmojo')->__('Circular')
         );
 
     }

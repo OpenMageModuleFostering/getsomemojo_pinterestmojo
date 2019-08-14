@@ -8,7 +8,7 @@
  * @license    http://getsome.mojomage.com/license/
  * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
  */
- ?>   
+ ?>
 <?php if ($this->getYeaH4yeaH()): ?>
 
     <script type="text/javascript">
@@ -28,17 +28,40 @@
 
     <?php if ($this->getButtonType() != GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION3_VALUE): ?>
 
+    <?php $pinterestOptions = array(); ?>
+
+    <?php if ($this->getButtonShape() == 'round' && !isset($pinterestOptions['data-pin-shape'])): ?>
+        <?php $pinterestOptions['data-pin-shape'] = $this->getButtonShape(); ?>
+    <?php endif; ?>
+
+    <?php if ($this->getButtonShape() == 'rectangular' && $this->getButtonSize() == 'large' && !isset($pinterestOptions['data-pin-height'])): ?>
+        <?php $pinterestOptions['data-pin-height'] = 28; ?>
+    <?php elseif ($this->getButtonShape() == 'round' && $this->getButtonSize() == 'large' && !isset($pinterestOptions['data-pin-height'])): ?>
+        <?php $pinterestOptions['data-pin-height'] = 32; ?>
+    <?php endif; ?>
+
+    <?php if ($this->getButtonShape() == 'rectangular' && !isset($pinterestOptions['data-pin-color'])): ?>
+        <?php $pinterestOptions['data-pin-color'] = $this->getButtonColor(); ?>
+    <?php endif; ?>
+
+    <?php $urlOptions = ''; ?>
+    <?php foreach ($pinterestOptions as $key => $value): ?>
+        <?php if (!empty($value)): ?>
+            <?php $urlOptions .= ' ' . $key . '="' . $value . '"'; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
     <div id="mojoPinterest" align="<?php echo $this->getButtonAlign() ?>" style="<?php echo $this->getPinStyle() ?>">
         <?php if ($this->getButtonType() == GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION1_VALUE): ?>
-        <a href="<?php echo $this->getPinUrl();?>" class="pin-it-button" data-pin-do="buttonPin" data-pin-config="<?php echo $this->getPinCount();?>">
+        <a href="<?php echo $this->getPinUrl(); ?>" class="pin-it-button" data-pin-do="buttonPin" data-pin-config="<?php echo $this->getPinCount(); ?>"<?php echo $urlOptions; ?>>
             <img src="<?php echo $this->_getPinButtonImageUrl() ?>" alt="Pin It" />
         </a>
         <?php elseif ($this->getButtonType() == GetSomeMojo_Pinterestmojo_Model_Config_ButtonType::OPTION2_VALUE): ?>
-        <a href="<?php echo $this->_getPinButtonAnchorUrl() ?>" data-pin-do="buttonBookmark">
+        <a href="<?php echo $this->_getPinButtonAnchorUrl() ?>" data-pin-do="buttonBookmark"<?php echo $urlOptions; ?>>
             <img src="<?php echo $this->_getPinButtonImageUrl() ?>" alt="Pin It" />
         </a>
         <?php endif ?>
-    </div> 
+    </div>
 
     <?php endif ?>
 

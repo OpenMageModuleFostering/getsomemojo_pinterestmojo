@@ -5,7 +5,7 @@
  *
  * @category   GetSomeMojo
  * @package    GetSomeMojo_Pinterestmojo
- * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @copyright  Copyright (c) 2011-2015 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
  * @license    http://getsome.mojomage.com/license/
  * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
  */
@@ -13,7 +13,7 @@
 <config>
     <modules>
         <GetSomeMojo_Pinterestmojo>
-            <version>2.0.1</version>
+            <version>2.1.0</version>
         </GetSomeMojo_Pinterestmojo>
     </modules>
     <admin>
@@ -37,7 +37,7 @@
             <pinterestmojo>
                 <class>GetSomeMojo_Pinterestmojo_Helper</class>
             </pinterestmojo>
-        </helpers>        
+        </helpers>
         <models>
             <pinterestmojo>
                 <class>GetSomeMojo_Pinterestmojo_Model_Config</class>
@@ -54,7 +54,7 @@
         <layout>
             <updates>
                 <getsomemojo_pinterestmojo>
-                    <file>getsomemojo/pinterestmojo/pinterest.xml</file>
+                    <file>getsomemojo/pinterestmojo.xml</file>
                 </getsomemojo_pinterestmojo>
             </updates>
         </layout>
@@ -95,6 +95,9 @@
                 <price>1</price>
             </general>
         </pinterestmojo>
+        <paypal>
+            <bncode>MojoCreative_SI_MagentoCE</bncode>
+        </paypal>
     </default>
 
 </config>

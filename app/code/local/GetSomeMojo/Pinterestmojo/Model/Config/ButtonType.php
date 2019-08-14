@@ -4,7 +4,7 @@
  *
  * @category   GetSomeMojo
  * @package    GetSomeMojo_Pinterestmojo
- * @copyright  Copyright (c) 2011-2013 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
+ * @copyright  Copyright (c) 2011-2015 Mojo Creative & Technical Solutions LLC (http://GetSome.MojoMage.com)
  * @license    http://getsome.mojomage.com/license/
  * @author     Mojo Creative & Technical Solutions LLC <info@MojoMage.com>
  */
@@ -18,7 +18,7 @@ class GetSomeMojo_Pinterestmojo_Model_Config_ButtonType extends Mage_Core_Model_
 
     /**
      * Fills the select field with values
-     * 
+     *
      * @return array
      */
     public function toOptionArray()
