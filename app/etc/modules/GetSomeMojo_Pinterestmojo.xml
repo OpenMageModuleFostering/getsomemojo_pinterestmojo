@@ -15,9 +15,9 @@
         <GetSomeMojo_Pinterestmojo>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
+            <!-- <depends>
                 <GetSomeMojo_Core />
-            </depends>
+            </depends> -->
         </GetSomeMojo_Pinterestmojo>
     </modules>
 </config>

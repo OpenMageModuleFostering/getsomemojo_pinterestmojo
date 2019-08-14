@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>GetSomeMojo_Pinterestmojo</name>
-    <version>2.1.1</version>
+    <version>2.1.2</version>
     <stability>stable</stability>
     <license uri="http://getsome.mojomage.com/license/">Custom</license>
     <channel>community</channel>
     <extends/>
     <summary>Adds the Pinterest Pin Button to the Product View page.</summary>
     <description>Increase SEO and your social presence by adding the Pinterest Pin button to your Product View pages. Back-end system configurations settings allow administrators to easily control the latest Pinterest Pin It Button features.</description>
-    <notes>- Fixed issue with JS Merging</notes>
+    <notes>- Standardization</notes>
     <authors><author><name>Mitchell Robles, Jr.</name><user>mojomitch</user><email>info@getsomemojo.net</email></author></authors>
-    <date>2015-09-15</date>
-    <time>02:47:46</time>
-    <contents><target name="magelocal"><dir name="GetSomeMojo"><dir name="Pinterestmojo"><dir name="Block"><file name="PinterestButton.php" hash="d3ef5c29d873d786406f4f49591b19b2"/></dir><dir name="Helper"><file name="Data.php" hash="80e41bd1a395b06658cebd71561ddb4a"/></dir><dir name="Model"><dir name="Config"><file name="Bn.php" hash="c28dfe0cd9c348b924f3da692c2219c3"/><file name="ButtonAlign.php" hash="a9e707f93d71a5c322388d6f1d8d16d1"/><file name="ButtonColor.php" hash="dfae27e1182dde59acb202a0c59370f2"/><file name="ButtonShape.php" hash="7a319839953bba126a91fbdefec3516b"/><file name="ButtonSize.php" hash="b8b86fe9fe03b5221b2d3882c83d257c"/><file name="ButtonType.php" hash="606a53c02a0aea20abf487f6a8f59f0c"/><file name="PinCount.php" hash="1a94d7f3adf11b7ffa690793d0bad3d3"/></dir></dir><dir name="etc"><file name="config.xml" hash="dbf0e836fd6c92ef6031e9a416ee1a2f"/><file name="system.xml" hash="f73465868a5eda2560317a70b89e76be"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="GetSomeMojo_Pinterestmojo.xml" hash="87a8442f44c071f3cfb193eec36d6a53"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="getsomemojo"><file name="pinterestmojo.xml" hash="a4ff3611810f36162641749c6ca4290c"/></dir></dir><dir name="template"><dir name="getsomemojo"><dir name="pinterestmojo"><file name="pinit.phtml" hash="ad8e664ba3d3a089cc3f038ebcf0848f"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <date>2015-09-30</date>
+    <time>17:53:36</time>
+    <contents><target name="magelocal"><dir name="GetSomeMojo"><dir name="Pinterestmojo"><dir name="Block"><file name="PinterestButton.php" hash="d3ef5c29d873d786406f4f49591b19b2"/></dir><dir name="Helper"><file name="Data.php" hash="80e41bd1a395b06658cebd71561ddb4a"/></dir><dir name="Model"><dir name="Config"><file name="Bn.php" hash="c28dfe0cd9c348b924f3da692c2219c3"/><file name="ButtonAlign.php" hash="a9e707f93d71a5c322388d6f1d8d16d1"/><file name="ButtonColor.php" hash="dfae27e1182dde59acb202a0c59370f2"/><file name="ButtonShape.php" hash="7a319839953bba126a91fbdefec3516b"/><file name="ButtonSize.php" hash="b8b86fe9fe03b5221b2d3882c83d257c"/><file name="ButtonType.php" hash="606a53c02a0aea20abf487f6a8f59f0c"/><file name="PinCount.php" hash="1a94d7f3adf11b7ffa690793d0bad3d3"/></dir></dir><dir name="etc"><file name="config.xml" hash="dbf0e836fd6c92ef6031e9a416ee1a2f"/><file name="system.xml" hash="f73465868a5eda2560317a70b89e76be"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="GetSomeMojo_Pinterestmojo.xml" hash="e8ced5108243820e6541093b833275e0"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><dir name="getsomemojo"><file name="pinterestmojo.xml" hash="a4ff3611810f36162641749c6ca4290c"/></dir></dir><dir name="template"><dir name="getsomemojo"><dir name="pinterestmojo"><file name="pinit.phtml" hash="ad8e664ba3d3a089cc3f038ebcf0848f"/></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>5.5.14</max></php></required></dependencies>
 </package>
