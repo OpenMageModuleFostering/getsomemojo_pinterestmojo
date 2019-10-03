@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/GetSomeMojo_Pinterestmojo",
+    "name": "OpenMageModuleFostering\/GetSomeMojo_Pinterestmojo",
     "type": "magento-module",
     "license": "Custom",
     "homepage": "",
     "description": "Adds the Pinterest Pin Button to the Product View page.",
     "authors": [
-    {
-        "name": "Mitchell Robles, Jr.",
-        "email": "info@getsomemojo.net"
-    }
-],
+        {
+            "name": "Mitchell Robles, Jr.",
+            "email": "info@getsomemojo.net"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
